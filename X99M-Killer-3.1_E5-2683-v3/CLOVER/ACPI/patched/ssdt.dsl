@@ -50,7 +50,7 @@ DefinitionBlock ("ssdt.aml", "SSDT", 1, "APPLE ", "CpuPm", 0x00021500)
     {
         Method (_INI, 0, NotSerialized)
         {
-            Store ("ssdtPRGen version.....: 21.5 / Mac OS X 10.12.6 (16G1036)", Debug)
+            Store ("ssdtPRGen version.....: 21.5 / Mac OS X 10.13.5 (17F77)", Debug)
             Store ("custom mode...........: 0", Debug)
             Store ("host processor........: Intel(R) Xeon(R) CPU E5-2683 v3 @ 2.00GHz", Debug)
             Store ("target processor......: E5-2683 v3", Debug)
@@ -63,7 +63,7 @@ DefinitionBlock ("ssdt.aml", "SSDT", 1, "APPLE ", "CpuPm", 0x00021500)
             Store ("packageLength.........: 19", Debug)
             Store ("turboStates...........: 10", Debug)
             Store ("maxTurboFrequency.....: 3000", Debug)
-            Store ("machdep.xcpm.mode.....: 0", Debug)
+            Store ("machdep.xcpm.mode.....: 1", Debug)
         }
 
         Name (APLF, Zero)
@@ -97,13 +97,13 @@ DefinitionBlock ("ssdt.aml", "SSDT", 1, "APPLE ", "CpuPm", 0x00021500)
         Method (ACST, 0, NotSerialized)
         {
             Store ("Method _SB_.SCK0.CP00.ACST Called", Debug)
-            Store ("CP00 C-States    : 13", Debug)
+            Store ("CP00 C-States    : 29", Debug)
 
             /* Low Power Modes for CP00 */
-            Return (Package (0x05)
+            Return (Package (0x06)
             {
                 One,
-                0x03,
+                0x04,
                 Package (0x04)
                 {
                     ResourceTemplate ()
@@ -150,6 +150,22 @@ DefinitionBlock ("ssdt.aml", "SSDT", 1, "APPLE ", "CpuPm", 0x00021500)
                     0x06,
                     0xF5,
                     0x015E
+                },
+
+                Package (0x04)
+                {
+                    ResourceTemplate ()
+                    {
+                        Register (FFixedHW,
+                            0x01,               // Bit Width
+                            0x02,               // Bit Offset
+                            0x0000000000000030, // Address
+                            0x03,               // Access Size
+                            )
+                    },
+                    0x07,
+                    0xF5,
+                    0xC8
                 }
             })
         }
@@ -186,7 +202,7 @@ DefinitionBlock ("ssdt.aml", "SSDT", 1, "APPLE ", "CpuPm", 0x00021500)
         Method (ACST, 0, NotSerialized)
         {
             Store ("Method _SB_.SCK0.CP01.ACST Called", Debug)
-            Store ("CP01 C-States    : 13", Debug)
+            Store ("CP01 C-States    : 7", Debug)
 
             /* Low Power Modes for CP01 */
             Return (Package (0x05)
@@ -216,13 +232,13 @@ DefinitionBlock ("ssdt.aml", "SSDT", 1, "APPLE ", "CpuPm", 0x00021500)
                         Register (FFixedHW,
                             0x01,               // Bit Width
                             0x02,               // Bit Offset
-                            0x0000000000000020, // Address
+                            0x0000000000000010, // Address
                             0x03,               // Access Size
                             )
                     },
-                    0x03,
-                    0xC6,
-                    0xC8
+                    0x02,
+                    0x94,
+                    0x01F4
                 },
 
                 Package (0x04)
@@ -236,9 +252,9 @@ DefinitionBlock ("ssdt.aml", "SSDT", 1, "APPLE ", "CpuPm", 0x00021500)
                             0x03,               // Access Size
                             )
                     },
-                    0x06,
-                    0xF5,
-                    0x015E
+                    0x03,
+                    0xC6,
+                    0xC8
                 }
             })
         }
