@@ -31,6 +31,20 @@
 					R0ZYMQ==
 					</data>
 				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>ALZA to HDEF audio</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					QUxaQQ==
+					</data>
+					<key>Replace</key>
+					<data>
+					SERFRg==
+					</data>
+				</dict>
 			</array>
 			<key>ReuseFFFF</key>
 			<false/>
@@ -55,7 +69,7 @@
 		<key>Debug</key>
 		<false/>
 		<key>DefaultVolume</key>
-		<string>OSX</string>
+		<string>MacOS</string>
 		<key>Secure</key>
 		<false/>
 		<key>Timeout</key>
@@ -74,6 +88,8 @@
 		<dict>
 			<key>Inject</key>
 			<string>1</string>
+			<key>ResetHDA</key>
+			<true/>
 		</dict>
 		<key>USB</key>
 		<dict>
@@ -116,7 +132,7 @@
 			<true/>
 		</dict>
 		<key>Theme</key>
-		<string>MavericksLogin</string>
+		<string>christmas</string>
 	</dict>
 	<key>Graphics</key>
 	<dict>
@@ -265,6 +281,8 @@
 		<key>InjectKexts</key>
 		<string>Yes</string>
 		<key>InjectSystemID</key>
+		<true/>
+		<key>NvidiaWeb</key>
 		<true/>
 	</dict>
 </dict>
