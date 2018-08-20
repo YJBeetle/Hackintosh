@@ -2,6 +2,11 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>#DisableDrivers</key>
+	<array>
+		<string>CsmVideoDxe</string>
+		<string>VBoxExt4</string>
+	</array>
 	<key>ACPI</key>
 	<dict>
 		<key>DSDT</key>
@@ -10,6 +15,23 @@
 			<false/>
 			<key>DropOEM_DSM</key>
 			<false/>
+			<key>Patches</key>
+			<array>
+				<dict>
+					<key>Comment</key>
+					<string>PEGP to GFX1 NVIDIA</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					UEVHUA==
+					</data>
+					<key>Replace</key>
+					<data>
+					R0ZYMQ==
+					</data>
+				</dict>
+			</array>
 			<key>ReuseFFFF</key>
 			<false/>
 		</dict>
@@ -18,7 +40,12 @@
 			<key>DropOem</key>
 			<false/>
 			<key>Generate</key>
-			<false/>
+			<dict>
+				<key>CStates</key>
+				<false/>
+				<key>PStates</key>
+				<false/>
+			</dict>
 		</dict>
 	</dict>
 	<key>Boot</key>
@@ -201,13 +228,13 @@
 	<key>SMBIOS</key>
 	<dict>
 		<key>BiosReleaseDate</key>
-		<string>02/29/08</string>
+		<string>06/26/2017</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>BiosVersion</key>
-		<string>MP31.88Z.006C.B05.0802291410</string>
+		<string>MP61.88Z.0117.B01.1706261354</string>
 		<key>Board-ID</key>
-		<string>Mac-F42C88C8</string>
+		<string>Mac-F60DEB81FF30ACF6</string>
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardType</key>
@@ -217,17 +244,19 @@
 		<key>ChassisManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>ChassisType</key>
-		<string>06</string>
+		<string>0x06</string>
 		<key>Family</key>
 		<string>Mac Pro</string>
+		<key>LocationInChassis</key>
+		<string>Part Component</string>
 		<key>Manufacturer</key>
 		<string>Apple Inc.</string>
-		<key>ProductName</key>
-		<string>MacPro3,1</string>
-		<key>SerialNumber</key>
-		<string>G8815052XYL</string>
-		<key>Trust</key>
+		<key>Mobile</key>
 		<false/>
+		<key>ProductName</key>
+		<string>MacPro6,1</string>
+		<key>SerialNumber</key>
+		<string>F5KLA770F9VM</string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>
