@@ -18,24 +18,27 @@
 			<key>DropOem</key>
 			<false/>
 			<key>Generate</key>
-			<true/>
+			<false/>
 		</dict>
 	</dict>
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>-v dart=0 npci=0x2000 nv_disable=1 kext-dev-mode=1 rootless=0</string>
+		<string>dart=0 nvda_drv=1 kext-dev-mode=1</string>
 		<key>Debug</key>
 		<false/>
 		<key>DefaultVolume</key>
-		<string>OS X EI Capitan</string>
-		<key>Legacy</key>
-		<string>PBR</string>
+		<string>OSX</string>
 		<key>Secure</key>
 		<false/>
 		<key>Timeout</key>
-		<integer>5</integer>
+		<integer>10</integer>
 		<key>XMPDetection</key>
+		<false/>
+	</dict>
+	<key>CPU</key>
+	<dict>
+		<key>UseARTFrequency</key>
 		<false/>
 	</dict>
 	<key>Devices</key>
@@ -43,7 +46,7 @@
 		<key>Audio</key>
 		<dict>
 			<key>Inject</key>
-			<string>No</string>
+			<string>1</string>
 		</dict>
 		<key>USB</key>
 		<dict>
@@ -61,13 +64,8 @@
 	</array>
 	<key>GUI</key>
 	<dict>
-		<key>Hide</key>
-		<array>
-			<string>BOOTX64.EFI</string>
-			<string>Windows</string>
-		</array>
 		<key>Language</key>
-		<string>zh_CN:0</string>
+		<string>en:0</string>
 		<key>Mouse</key>
 		<dict>
 			<key>DoubleClick</key>
@@ -84,12 +82,14 @@
 			<key>Entries</key>
 			<true/>
 			<key>Legacy</key>
-			<true/>
+			<false/>
+			<key>Linux</key>
+			<false/>
 			<key>Tool</key>
 			<true/>
 		</dict>
 		<key>Theme</key>
-		<string>black_green</string>
+		<string>MavericksLogin</string>
 	</dict>
 	<key>Graphics</key>
 	<dict>
@@ -98,12 +98,14 @@
 			<key>ATI</key>
 			<false/>
 			<key>Intel</key>
-			<true/>
+			<false/>
 			<key>NVidia</key>
 			<false/>
 		</dict>
 		<key>NvidiaSingle</key>
 		<false/>
+		<key>PatchVBios</key>
+		<true/>
 	</dict>
 	<key>KernelAndKextPatches</key>
 	<dict>
@@ -125,7 +127,25 @@
 		<array>
 			<dict>
 				<key>Comment</key>
+				<string>t1-10.11-AppleHDA/Realtek ALC...</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				gxnUEQ==
+				</data>
+				<key>Name</key>
+				<string>AppleHDA</string>
+				<key>Replace</key>
+				<data>
+				AAAAAA==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>External icons patch</string>
+				<key>Disabled</key>
+				<false/>
 				<key>Find</key>
 				<data>
 				RXh0ZXJuYWw=
@@ -135,6 +155,38 @@
 				<key>Replace</key>
 				<data>
 				SW50ZXJuYWw=
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>t1-AppleHDA/Resources/xml&gt;zml</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				eG1sLnps
+				</data>
+				<key>Name</key>
+				<string>AppleHDA</string>
+				<key>Replace</key>
+				<data>
+				em1sLnps
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>t1-10.9-10.11-AppleHDA/Realtek ALC1150</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				ixnUEQ==
+				</data>
+				<key>Name</key>
+				<string>AppleHDA</string>
+				<key>Replace</key>
+				<data>
+				AAnsEA==
 				</data>
 			</dict>
 		</array>
@@ -149,31 +201,31 @@
 	<key>SMBIOS</key>
 	<dict>
 		<key>BiosReleaseDate</key>
-		<string>09/29/2014</string>
+		<string>02/29/08</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>BiosVersion</key>
-		<string>IM151.88Z.0207.B00.1409291931</string>
+		<string>MP31.88Z.006C.B05.0802291410</string>
 		<key>Board-ID</key>
-		<string>Mac-42FD25EABCABB274</string>
+		<string>Mac-F42C88C8</string>
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardType</key>
-		<integer>10</integer>
+		<integer>11</integer>
 		<key>ChassisAssetTag</key>
-		<string>iMac-Aluminum</string>
+		<string>Pro-Enclosure</string>
 		<key>ChassisManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>ChassisType</key>
-		<string>13</string>
+		<string>06</string>
 		<key>Family</key>
-		<string>iMac</string>
+		<string>Mac Pro</string>
 		<key>Manufacturer</key>
 		<string>Apple Inc.</string>
 		<key>ProductName</key>
-		<string>iMac15,1</string>
+		<string>MacPro3,1</string>
 		<key>SerialNumber</key>
-		<string>C02MYSG2FY11</string>
+		<string>G8815052XYL</string>
 		<key>Trust</key>
 		<false/>
 		<key>Version</key>
@@ -182,7 +234,7 @@
 	<key>SystemParameters</key>
 	<dict>
 		<key>InjectKexts</key>
-		<string>Detect</string>
+		<string>Yes</string>
 		<key>InjectSystemID</key>
 		<true/>
 	</dict>
