@@ -15,6 +15,13 @@
 			<false/>
 			<key>DropOEM_DSM</key>
 			<false/>
+			<key>Fixes</key>
+			<dict>
+				<key>AddDTGP_0001</key>
+				<true/>
+				<key>FakeLPC_0020</key>
+				<true/>
+			</dict>
 			<key>Patches</key>
 			<array>
 				<dict>
@@ -29,20 +36,6 @@
 					<key>Replace</key>
 					<data>
 					R0ZYMQ==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>ALZA to HDEF audio</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					QUxaQQ==
-					</data>
-					<key>Replace</key>
-					<data>
-					SERFRg==
 					</data>
 				</dict>
 			</array>
@@ -107,6 +100,10 @@
 	</array>
 	<key>GUI</key>
 	<dict>
+		<key>Hide</key>
+		<array>
+			<string>Preboot</string>
+		</array>
 		<key>Language</key>
 		<string>en:0</string>
 		<key>Mouse</key>
@@ -155,7 +152,7 @@
 		<key>AppleRTC</key>
 		<true/>
 		<key>AsusAICPUPM</key>
-		<true/>
+		<false/>
 		<key>Debug</key>
 		<false/>
 		<key>KernelCpu</key>
@@ -170,22 +167,6 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>t1-10.11-AppleHDA/Realtek ALC...</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				gxnUEQ==
-				</data>
-				<key>Name</key>
-				<string>AppleHDA</string>
-				<key>Replace</key>
-				<data>
-				AAAAAA==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>External icons patch</string>
 				<key>Disabled</key>
 				<false/>
@@ -198,38 +179,6 @@
 				<key>Replace</key>
 				<data>
 				SW50ZXJuYWw=
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>t1-AppleHDA/Resources/xml&gt;zml</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				eG1sLnps
-				</data>
-				<key>Name</key>
-				<string>AppleHDA</string>
-				<key>Replace</key>
-				<data>
-				em1sLnps
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>t1-10.9-10.11-AppleHDA/Realtek ALC1150</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				ixnUEQ==
-				</data>
-				<key>Name</key>
-				<string>AppleHDA</string>
-				<key>Replace</key>
-				<data>
-				AAnsEA==
 				</data>
 			</dict>
 		</array>
