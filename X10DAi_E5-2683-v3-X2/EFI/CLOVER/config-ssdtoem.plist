@@ -37,27 +37,14 @@
 			<key>ReuseFFFF</key>
 			<false/>
 		</dict>
-		<key>DropTables</key>
-		<array>
-			<dict>
-				<key>Signature</key>
-				<string>SSDT</string>
-				<key>TableId</key>
-				<string>CpuPm</string>
-			</dict>
-			<dict>
-				<key>Signature</key>
-				<string>SSDT</string>
-				<key>TableId</key>
-				<string>Cpu0Ist</string>
-			</dict>
-		</array>
 		<key>SSDT</key>
 		<dict>
-			<key>DropOem</key>
-			<false/>
-			<key>Generate</key>
+			<key>DoubleFirstState</key>
 			<true/>
+			<key>DropOem</key>
+			<true/>
+			<key>Generate</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>Boot</key>
@@ -183,54 +170,6 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>AppleGraphicsDevicePolicy (board-id) Patch (c) Pike R. Alpha</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				Ym9hcmQtaWQ=
-				</data>
-				<key>Name</key>
-				<string>AppleGraphicsDevicePolicy</string>
-				<key>Replace</key>
-				<data>
-				Ym9hcmQtaXg=
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>TRIM</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				QVBQTEUgU1NEAA==
-				</data>
-				<key>Name</key>
-				<string>IOAHCIBlockStorage</string>
-				<key>Replace</key>
-				<data>
-				AAAAAAAAAAAAAA==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>10.9.4-10.10-/x99 ALC Onboard Audio</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				IIw=
-				</data>
-				<key>Name</key>
-				<string>AppleHDAController</string>
-				<key>Replace</key>
-				<data>
-				II0=
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>Skylake AppleAPIC Patch (c) Pike R. Alpha</string>
 				<key>Disabled</key>
 				<false/>
@@ -243,6 +182,22 @@
 				<key>Replace</key>
 				<data>
 				vhcAAACQ
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>AppleGraphicsDevicePolicy (board-id) Patch (c) Pike R. Alpha</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				Ym9hcmQtaWQ=
+				</data>
+				<key>Name</key>
+				<string>AppleGraphicsDevicePolicy</string>
+				<key>Replace</key>
+				<data>
+				Ym9hcmQtaXg=
 				</data>
 			</dict>
 			<dict>
@@ -275,6 +230,38 @@
 				<key>Replace</key>
 				<data>
 				SW50ZXJuYWw=
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>10.9.4-10.10-/x99 ALC Onboard Audio</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				IIw=
+				</data>
+				<key>Name</key>
+				<string>AppleHDAController</string>
+				<key>Replace</key>
+				<data>
+				II0=
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>TRIM</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				QVBQTEUgU1NEAA==
+				</data>
+				<key>Name</key>
+				<string>IOAHCIBlockStorage</string>
+				<key>Replace</key>
+				<data>
+				AAAAAAAAAAAAAA==
 				</data>
 			</dict>
 		</array>
