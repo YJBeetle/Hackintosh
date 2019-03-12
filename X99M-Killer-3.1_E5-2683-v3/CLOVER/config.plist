@@ -60,106 +60,21 @@
 			<false/>
 			<key>Debug</key>
 			<false/>
-			<key>DropOEM_DSM</key>
-			<dict>
-				<key>ATI</key>
-				<false/>
-				<key>Firewire</key>
-				<false/>
-				<key>HDA</key>
-				<false/>
-				<key>HDMI</key>
-				<false/>
-				<key>IDE</key>
-				<false/>
-				<key>IntelGFX</key>
-				<false/>
-				<key>LAN</key>
-				<false/>
-				<key>LPC</key>
-				<false/>
-				<key>NVidia</key>
-				<false/>
-				<key>SATA</key>
-				<false/>
-				<key>SmBUS</key>
-				<false/>
-				<key>USB</key>
-				<true/>
-				<key>WIFI</key>
-				<false/>
-			</dict>
 			<key>Fixes</key>
 			<dict>
 				<key>AddDTGP</key>
-				<true/>
+				<false/>
 				<key>FakeLPC</key>
-				<true/>
+				<false/>
 				<key>FixSBUS</key>
-				<true/>
+				<false/>
 				<key>FixUSB</key>
-				<true/>
+				<false/>
 			</dict>
 			<key>Name</key>
 			<string>DSDT.aml</string>
 			<key>Patches</key>
 			<array>
-				<dict>
-					<key>Comment</key>
-					<string>Add _SUN property for GIGE</string>
-					<key>Disabled</key>
-					<true/>
-					<key>Find</key>
-					<data>
-					UFhTWAhfQURSAAhfUFJXEgYC
-					</data>
-					<key>Replace</key>
-					<data>
-					UFhTWAhfQURSAAhfU1VOCgQIX1BSVxIGAg==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>Rename HDEF to AZAL</string>
-					<key>Disabled</key>
-					<true/>
-					<key>Find</key>
-					<data>
-					SERFRg==
-					</data>
-					<key>Replace</key>
-					<data>
-					QVpBTA==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>Rename oem _DSM to ZDSM</string>
-					<key>Disabled</key>
-					<true/>
-					<key>Find</key>
-					<data>
-					X0RTTQ==
-					</data>
-					<key>Replace</key>
-					<data>
-					WkRTTQ==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>Rename HECI to IMEI</string>
-					<key>Disabled</key>
-					<true/>
-					<key>Find</key>
-					<data>
-					SEVDSQ==
-					</data>
-					<key>Replace</key>
-					<data>
-					SU1FSQ==
-					</data>
-				</dict>
 				<dict>
 					<key>Comment</key>
 					<string>ALZA to HDEF audio</string>
@@ -178,7 +93,7 @@
 					<key>Comment</key>
 					<string>change HECI to IMEI</string>
 					<key>Disabled</key>
-					<false/>
+					<true/>
 					<key>Find</key>
 					<data>
 					SEVDSQ==
@@ -206,7 +121,7 @@
 					<key>Comment</key>
 					<string>H000 to IGPU ATI</string>
 					<key>Disabled</key>
-					<false/>
+					<true/>
 					<key>Find</key>
 					<data>
 					SDAwMA==
@@ -220,7 +135,7 @@
 					<key>Comment</key>
 					<string>EHC1 to EH01</string>
 					<key>Disabled</key>
-					<false/>
+					<true/>
 					<key>Find</key>
 					<data>
 					RUhDMQ==
@@ -234,7 +149,7 @@
 					<key>Comment</key>
 					<string>EHC2 to EH02</string>
 					<key>Disabled</key>
-					<false/>
+					<true/>
 					<key>Find</key>
 					<data>
 					RUhDMg==
@@ -258,47 +173,17 @@
 					WEgwMQ==
 					</data>
 				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change _OSI to XOSI</string>
-					<key>Disabled</key>
-					<true/>
-					<key>Find</key>
-					<data>
-					X09TSQ==
-					</data>
-					<key>Replace</key>
-					<data>
-					WE9TSQ==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change HECI to IMEI</string>
-					<key>Disabled</key>
-					<true/>
-					<key>Find</key>
-					<data>
-					SEVDSQ==
-					</data>
-					<key>Replace</key>
-					<data>
-					SU1FSQ==
-					</data>
-				</dict>
 			</array>
 			<key>ReuseFFFF</key>
 			<false/>
 		</dict>
-		<key>DropTables</key>
-		<array>
-			<dict>
-				<key>Signature</key>
-				<string>DMAR</string>
-			</dict>
-		</array>
 		<key>HaltEnabler</key>
-		<true/>
+		<false/>
+		<key>RenameDevices</key>
+		<dict>
+			<key>_SB.PCI0.BR3A.H000</key>
+			<string>IGPU</string>
+		</dict>
 		<key>SSDT</key>
 		<dict>
 			<key>#C3Latency</key>
@@ -334,7 +219,7 @@
 			<key>DoubleFirstState</key>
 			<false/>
 			<key>DropOem</key>
-			<true/>
+			<false/>
 			<key>Generate</key>
 			<dict>
 				<key>#APLF</key>
@@ -356,11 +241,9 @@
 			</dict>
 			<key>NoOemTableId</key>
 			<false/>
-			<key>PLimitDict</key>
-			<string>0</string>
-			<key>PluginType</key>
-			<string>1</string>
 		</dict>
+		<key>smartUPS</key>
+		<false/>
 	</dict>
 	<key>Boot</key>
 	<dict>
@@ -373,7 +256,7 @@
 		<key>#XMPDetection</key>
 		<string>-1</string>
 		<key>Arguments</key>
-		<string>-rad4200 npci=0x3000 -xcpm -v kext-dev-mode=1</string>
+		<string>-v npci=0x2000 kext-dev-mode=1</string>
 		<key>CustomLogo</key>
 		<string>Alternate</string>
 		<key>Debug</key>
@@ -429,7 +312,7 @@
 		<key>TurboDisable</key>
 		<false/>
 		<key>Type</key>
-		<string>0xA01</string>
+		<string>0x0F01</string>
 	</dict>
 	<key>Devices</key>
 	<dict>
@@ -784,6 +667,11 @@
 		</dict>
 		<key>#TextOnly</key>
 		<false/>
+		<key>Hide</key>
+		<array>
+			<string>Preboot</string>
+			<string>Recovery</string>
+		</array>
 		<key>Theme</key>
 		<string>embedded</string>
 	</dict>
@@ -847,7 +735,7 @@
 			PAEKICAgICAgAR4=
 			</data>
 			<key>Inject</key>
-			<true/>
+			<false/>
 		</dict>
 		<key>Inject</key>
 		<dict>
@@ -855,9 +743,9 @@
 			<false/>
 		</dict>
 		<key>LoadVBios</key>
-		<true/>
+		<false/>
 		<key>RadeonDeInit</key>
-		<true/>
+		<false/>
 	</dict>
 	<key>KernelAndKextPatches</key>
 	<dict>
@@ -1010,13 +898,13 @@
 		<key>AppleIntelCPUPM</key>
 		<false/>
 		<key>AppleRTC</key>
-		<true/>
+		<false/>
 		<key>Debug</key>
 		<false/>
 		<key>DellSMBIOSPatch</key>
 		<false/>
 		<key>FakeCPUID</key>
-		<string>0x040674</string>
+		<string>0x0306F2</string>
 		<key>KernelCpu</key>
 		<false/>
 		<key>KernelLapic</key>
@@ -1027,157 +915,145 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>xcpm_idle patch by Pike R. Alpha</string>
+				<string>_xcpm_core_scope_msrs © Pike R. Alpha Kernel 10.13.6</string>
 				<key>Disabled</key>
 				<true/>
 				<key>Find</key>
 				<data>
-				ILniAAAADzA=
+				vgMAAAAx0uhy/P//
 				</data>
 				<key>MatchOS</key>
-				<string>10.12</string>
+				<string>10.13.6</string>
 				<key>Replace</key>
 				<data>
-				ILniAAAAkJA=
+				vgMAAAAx0pCQkJCQ
 				</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>xcpm_bootstrap Sierra © Pike R. Alpha</string>
+				<string>_xcpm_SMT_scope_msrs 1＆2©Pike R. Alpha 10.13.6</string>
 				<key>Disabled</key>
 				<true/>
 				<key>Find</key>
 				<data>
-				g8PEg/si
+				vgsAAABd6QgAAAA=
 				</data>
 				<key>MatchOS</key>
-				<string>10.12</string>
+				<string>10.13.6</string>
 				<key>Replace</key>
 				<data>
-				g8O8g/si
+				vgsAAABdw5CQkJA=
 				</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>xcpm_core_scope_msrs © Pike R. Alpha</string>
+				<string>_xcpm_SMT_scope_msrs 1＆2©Pike R. Alpha 10.13.6</string>
 				<key>Disabled</key>
 				<true/>
 				<key>Find</key>
 				<data>
-				vgIAAAAx0uhs/P//
+				vgsAAAAx0uhf/P//
 				</data>
 				<key>MatchOS</key>
-				<string>10.12</string>
+				<string>10.13.6</string>
 				<key>Replace</key>
 				<data>
-				vgIAAAAx0pCQkJCQ
+				vgsAAAAx0pCQkJCQ
 				</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>xcpm_pkg_scope_msr © Pike R. Alpha</string>
+				<string>Broadwell-E performance Kernel patch macOS 10.13.6 (kindly provided by @PMheart)  </string>
 				<key>Disabled</key>
 				<true/>
 				<key>Find</key>
 				<data>
-				vgcAAAAx0uiU/P//
-				</data>
-				<key>MatchOS</key>
-				<string>10.12</string>
-				<key>Replace</key>
-				<data>
-				vgcAAAAx0pCQkJCQ
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Haswell-E CPUID Patch</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				g8Dp
-				</data>
-				<key>Replace</key>
-				<data>
-				g8Dm
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Broadwell-E CPUID Patch</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				g8Dp
-				</data>
-				<key>Replace</key>
-				<data>
-				g8Dh
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>xcpm performance fix by PMHeart</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				weMISGPTidBIweoguZkBAAAPMEj/BcmeawBIg8QIW13D
+				weMISGPTidBIweoguZkBAAAPMEj/Bbm9awBIg8QIW13D
 				Zi4PH4QAAAAAAA==
 				</data>
 				<key>MatchOS</key>
-				<string>10.13</string>
+				<string>10.13.6</string>
 				<key>Replace</key>
 				<data>
-				uwD/AABIY9OJ0EjB6iC5mQEAAA8wSP8FyZ5rAEiDxAhb
+				uwD/AABIY9OJ0EjB6iC5mQEAAA8wSP8Fub1rAEiDxAhb
 				XcOQkJCQkJCQkA==
 				</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>10.13 Installer/Updater install patch</string>
+				<string>xcpm_core_scope_msrs © Pike R. Alpha 10.14 (kindly provided by @PMheart)  </string>
 				<key>Disabled</key>
 				<true/>
 				<key>Find</key>
 				<data>
-				BwAAADHS6I/8//8=
+				MdLokfz//w==
 				</data>
 				<key>MatchOS</key>
-				<string>10.13</string>
+				<string>10.14</string>
 				<key>Replace</key>
 				<data>
-				BwAAADHSkJCQkJA=
+				MdKQkJCQkA==
 				</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>_cpuid_set_info_1013_broadwell by Piker Alpha</string>
+				<string>_xcpm_SMT_scope_msrs 1 &amp; 2 © Pike R. Alpha 10.14 (kindly provided by @PMheart)  </string>
 				<key>Disabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>
-				cjzQd1APtsA=
+				vgsAAABd6QgAAAA=
 				</data>
 				<key>MatchOS</key>
-				<string>10.13</string>
+				<string>10.14</string>
 				<key>Replace</key>
 				<data>
-				ajzQd1APtsA=
+				vgsAAABdw5CQkJA=
 				</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>_xcpm_bootstrap_1013_broad  by Piker Alpha</string>
+				<string>_xcpm_SMT_scope_msrs 1 &amp; 2 © Pike R. Alpha 10.14 (kindly provided by @PMheart)  </string>
 				<key>Disabled</key>
-				<false/>
+				<true/>
+				<key>Find</key>
+				<data>
+				MdLofvz//w==
+				</data>
+				<key>MatchOS</key>
+				<string>10.14</string>
+				<key>Replace</key>
+				<data>
+				MdKQkJCQkA==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>_xcpm_ performance_patch © Pike R. Alpha</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				weMISGPTidBIweoguZkBAAAPMEj/BZONdgBIg8QIW13D
+				Dx9AAA==
+				</data>
+				<key>MatchOS</key>
+				<string>10.14</string>
+				<key>Replace</key>
+				<data>
+				uwD/AABIY9OJ0EjB6iC5mQEAAA8wSP8Fk412AEiDxAhb
+				XcOQkA==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>xcpm_bootstrap (Broadwell-E) </string>
+				<key>Disabled</key>
+				<true/>
 				<key>Find</key>
 				<data>
 				idgExDwidyI=
 				</data>
-				<key>MatchOS</key>
-				<string>10.13</string>
 				<key>Replace</key>
 				<data>
 				idgEwzwidyI=
@@ -1185,46 +1061,56 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>_xcpm_pkg_scope_msrs  by Piker Alpha</string>
+				<string>xcpm_bootstrap (Haswell-E)</string>
 				<key>Disabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>
-				vgcAAAAx0uiP/P//
+				idgExDwidyI=
 				</data>
-				<key>MatchOS</key>
-				<string>10.13</string>
 				<key>Replace</key>
 				<data>
-				vgcAAAAx0pCQkJCQ
+				idgEwTwidyI=
 				</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>_xcpm_SMT_scope_msrs   by Piker Alpha</string>
+				<string>_xcpm_cpuid_set_info (Broadwell-E) </string>
 				<key>Disabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>
-				vgsAAABd6QgAAAA=
+				cjzQd1APtsA=
 				</data>
-				<key>MatchOS</key>
-				<string>10.13</string>
 				<key>Replace</key>
 				<data>
-				vgsAAABdw5CQkJA=
+				ajzQd1APtsA=
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>_xcpm_cpuid_set_info (Haswell-E)</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				cjzQd1APtsA=
+				</data>
+				<key>Replace</key>
+				<data>
+				bzzQd1APtsA=
 				</data>
 			</dict>
 		</array>
 		<key>KernelXCPM</key>
-		<false/>
+		<true/>
 		<key>KextsToPatch</key>
 		<array>
 			<dict>
 				<key>Comment</key>
 				<string>TRIM Enabler</string>
 				<key>Disabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>
 				QVBQTEUgU1NEAA==
@@ -1249,6 +1135,8 @@
 				</data>
 				<key>InfoPlistPatch</key>
 				<false/>
+				<key>MatchOS</key>
+				<string>10.13</string>
 				<key>Name</key>
 				<string>IOPCIFamily</string>
 				<key>Replace</key>
@@ -1258,20 +1146,22 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>change port limit to 24 ports</string>
+				<string>IOPCIFamily patch © PMHeart</string>
 				<key>Disabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>
-				g32UDw+DlwQAAA==
+				SD0AAABA
 				</data>
 				<key>InfoPlistPatch</key>
 				<false/>
+				<key>MatchOS</key>
+				<string>10.14</string>
 				<key>Name</key>
-				<string>AppleUSBXHCI</string>
+				<string>IOPCIFamily</string>
 				<key>Replace</key>
 				<data>
-				g32UD5CQkJCQkA==
+				SD0AAACA
 				</data>
 			</dict>
 		</array>
@@ -1399,33 +1289,33 @@
 		<key>#Version</key>
 		<string>1.0</string>
 		<key>BiosReleaseDate</key>
-		<string>12/08/2017</string>
+		<string>07/30/18</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>BiosVersion</key>
-		<string>IMP11.88Z.0064.B30.1712081714</string>
+		<string>MP51.88Z.F000.B00.1807300628</string>
 		<key>Board-ID</key>
-		<string>Mac-7BA5B2D9E42DDD94</string>
+		<string>Mac-F221BEC8</string>
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string>C02747200GUF5021H</string>
+		<string>PT0200HFCVBZY</string>
 		<key>BoardType</key>
-		<integer>10</integer>
+		<integer>11</integer>
 		<key>BoardVersion</key>
-		<string>1.0</string>
+		<string>1.2</string>
 		<key>ChassisAssetTag</key>
-		<string>iMacPro-Aluminum</string>
+		<string>Pro-Enclosure</string>
 		<key>ChassisManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>ChassisType</key>
-		<string>0x09</string>
+		<string>0x07</string>
 		<key>Family</key>
-		<string>iMac Pro</string>
+		<string>MacPro</string>
 		<key>FirmwareFeatures</key>
-		<string>0xFD8FF53F</string>
+		<string>0xE80FE137</string>
 		<key>FirmwareFeaturesMask</key>
-		<string>0xFF9FFF3F</string>
+		<string>0xFF1FFF3F</string>
 		<key>LocationInChassis</key>
 		<string>Part Component</string>
 		<key>Manufacturer</key>
@@ -1435,11 +1325,13 @@
 		<key>PlatformFeature</key>
 		<string>0xFFFF</string>
 		<key>ProductName</key>
-		<string>iMacPro1,1</string>
+		<string>MacPro5,1</string>
 		<key>SerialNumber</key>
-		<string>C02VRNH0HX87</string>
+		<string>PT0211H4HFC</string>
+		<key>SmUUID</key>
+		<string>78D62D82-0BB3-46E2-8BBD-EB1DA6EA2FB3</string>
 		<key>Version</key>
-		<string>1.0</string>
+		<string>1.2</string>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
