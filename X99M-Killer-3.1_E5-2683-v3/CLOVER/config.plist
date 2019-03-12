@@ -256,7 +256,7 @@
 		<key>#XMPDetection</key>
 		<string>-1</string>
 		<key>Arguments</key>
-		<string>-v npci=0x2000 kext-dev-mode=1</string>
+		<string>npci=0x2000 kext-dev-mode=1 -xcpm -v -xcpm_ipi</string>
 		<key>CustomLogo</key>
 		<string>Alternate</string>
 		<key>Debug</key>
@@ -543,6 +543,8 @@
 			<true/>
 			<key>Inject</key>
 			<true/>
+			<key>NameEH00</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>GUI</key>
@@ -915,155 +917,9 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>_xcpm_core_scope_msrs © Pike R. Alpha Kernel 10.13.6</string>
+				<string>xcpm_bootstrap_HASwell_E © Pike R. Alpha</string>
 				<key>Disabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				vgMAAAAx0uhy/P//
-				</data>
-				<key>MatchOS</key>
-				<string>10.13.6</string>
-				<key>Replace</key>
-				<data>
-				vgMAAAAx0pCQkJCQ
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>_xcpm_SMT_scope_msrs 1＆2©Pike R. Alpha 10.13.6</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				vgsAAABd6QgAAAA=
-				</data>
-				<key>MatchOS</key>
-				<string>10.13.6</string>
-				<key>Replace</key>
-				<data>
-				vgsAAABdw5CQkJA=
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>_xcpm_SMT_scope_msrs 1＆2©Pike R. Alpha 10.13.6</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				vgsAAAAx0uhf/P//
-				</data>
-				<key>MatchOS</key>
-				<string>10.13.6</string>
-				<key>Replace</key>
-				<data>
-				vgsAAAAx0pCQkJCQ
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Broadwell-E performance Kernel patch macOS 10.13.6 (kindly provided by @PMheart)  </string>
-				<key>Disabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				weMISGPTidBIweoguZkBAAAPMEj/Bbm9awBIg8QIW13D
-				Zi4PH4QAAAAAAA==
-				</data>
-				<key>MatchOS</key>
-				<string>10.13.6</string>
-				<key>Replace</key>
-				<data>
-				uwD/AABIY9OJ0EjB6iC5mQEAAA8wSP8Fub1rAEiDxAhb
-				XcOQkJCQkJCQkA==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>xcpm_core_scope_msrs © Pike R. Alpha 10.14 (kindly provided by @PMheart)  </string>
-				<key>Disabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				MdLokfz//w==
-				</data>
-				<key>MatchOS</key>
-				<string>10.14</string>
-				<key>Replace</key>
-				<data>
-				MdKQkJCQkA==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>_xcpm_SMT_scope_msrs 1 &amp; 2 © Pike R. Alpha 10.14 (kindly provided by @PMheart)  </string>
-				<key>Disabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				vgsAAABd6QgAAAA=
-				</data>
-				<key>MatchOS</key>
-				<string>10.14</string>
-				<key>Replace</key>
-				<data>
-				vgsAAABdw5CQkJA=
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>_xcpm_SMT_scope_msrs 1 &amp; 2 © Pike R. Alpha 10.14 (kindly provided by @PMheart)  </string>
-				<key>Disabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				MdLofvz//w==
-				</data>
-				<key>MatchOS</key>
-				<string>10.14</string>
-				<key>Replace</key>
-				<data>
-				MdKQkJCQkA==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>_xcpm_ performance_patch © Pike R. Alpha</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				weMISGPTidBIweoguZkBAAAPMEj/BZONdgBIg8QIW13D
-				Dx9AAA==
-				</data>
-				<key>MatchOS</key>
-				<string>10.14</string>
-				<key>Replace</key>
-				<data>
-				uwD/AABIY9OJ0EjB6iC5mQEAAA8wSP8Fk412AEiDxAhb
-				XcOQkA==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>xcpm_bootstrap (Broadwell-E) </string>
-				<key>Disabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				idgExDwidyI=
-				</data>
-				<key>Replace</key>
-				<data>
-				idgEwzwidyI=
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>xcpm_bootstrap (Haswell-E)</string>
-				<key>Disabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>
 				idgExDwidyI=
@@ -1075,35 +931,241 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>_xcpm_cpuid_set_info (Broadwell-E) </string>
+				<string>xcpm_pkg_scope_msrs (c) Pike R. Alpha</string>
 				<key>Disabled</key>
 				<true/>
 				<key>Find</key>
 				<data>
-				cjzQd1APtsA=
+				vgcAAAAx0uiP/P//
 				</data>
+				<key>MatchOS</key>
+				<string>10.13</string>
 				<key>Replace</key>
 				<data>
-				ajzQd1APtsA=
+				vgcAAAAx0pCQkJCQ
 				</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>_xcpm_cpuid_set_info (Haswell-E)</string>
+				<string>xcpm_pkg_scope_msrs (c) Pike R. Alpha for 10.14 N.Mano</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				vgcAAAAx0uiu/P//
+				</data>
+				<key>MatchOS</key>
+				<string>10.14</string>
+				<key>Replace</key>
+				<data>
+				vgcAAAAx0pCQkJCQ
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>xcpm_SMT_scope_msrs (c) Pike R. Alpha</string>
 				<key>Disabled</key>
 				<true/>
 				<key>Find</key>
 				<data>
-				cjzQd1APtsA=
+				vgsAAAAx0uhf/P//
+				</data>
+				<key>MatchOS</key>
+				<string>10.13</string>
+				<key>Replace</key>
+				<data>
+				vgsAAAAx0pCQkJCQ
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>xcpm_SMT_scope_msrs (c) Pike R. Alpha for X99 10.14 by N.Mano</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				vgsAAAAx0uh+/P//
+				</data>
+				<key>MatchOS</key>
+				<string>10.14</string>
+				<key>Replace</key>
+				<data>
+				vgsAAAAx0pCQkJCQ
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>EIST Performance (c) Okrasit fix by @PMheart for 10.13.5</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				weMISGPTidBIweoguZkBAAAPMEj/BbmtawBIg8QIW13D
+				Zi4PH4QAAAAAAA==
+				</data>
+				<key>MatchOS</key>
+				<string>10.13.5</string>
+				<key>Replace</key>
+				<data>
+				uwD/AABIY9OJ0EjB6iC5mQEAAA8wSP8Fua1rAEiDxAhb
+				XcOQkJCQkJCQkA==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>EIST Performance (c)Okrasit  fix by @PMheart for 10.13.6</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				weMISGPTidBIweoguZkBAAAPMEj/BXmwawBIg8QIW13D
+				Zi4PH4QAAAAAAA==
+				</data>
+				<key>MatchOS</key>
+				<string>10.13.6</string>
+				<key>Replace</key>
+				<data>
+				uwD/AABIY9OJ0EjB6iC5mQEAAA8wSP8FebBrAEiDxAhb
+				XcOQkJCQkJCQkA==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>EIST Performance (c)Okrasit fix by @PMheart</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				weMISGPTidBIweoguZkBAAAPMEj/BZONdgBIg8QIW13D
+				Dx9AAA==
+				</data>
+				<key>MatchOS</key>
+				<string>10.14</string>
+				<key>Replace</key>
+				<data>
+				uwD/AABIY9OJ0EjB6iC5mQEAAA8wSP8Fk652AEiDxAhb
+				XcOQkA==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>EIST Performance fix by @PMheart for 10.14.1</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				weMISGPTidBIweoguZkBAAAPMEj/BbOPdgBIg8QIW13D
+				Dx9AAA==
+				</data>
+				<key>MatchOS</key>
+				<string>10.14.1</string>
+				<key>Replace</key>
+				<data>
+				uwD/AABIY9OJ0EjB6iC5mQEAAA8wSP8Fk652AEiDxAhb
+				XcOQkA==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>EIST Performance fix by @PMheart for 10.14.2 by N.Mano</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				weMISGPTidBIweoguZkBAAAPMEj/BSODdgBIg8QIW13D
+				Dx9AAA==
+				</data>
+				<key>MatchOS</key>
+				<string>10.14.2</string>
+				<key>Replace</key>
+				<data>
+				uwD/AABIY9OJ0EjB6iC5mQEAAA8wSP8Fk652AEiDxAhb
+				XcOQkA==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>EIST Performance fix by @PMheart for 10.14.2 for me</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				weMISGPTidBIweoguZkBAAAPMEj/BcNydgBIg8QIW13D
+				Dx9AAA==
+				</data>
+				<key>MatchOS</key>
+				<string>10.14.2</string>
+				<key>Replace</key>
+				<data>
+				uwD/AABIY9OJ0EjB6iC5mQEAAA8wSP8Fk652AEiDxAhb
+				XcOQkA==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>XCPM Performance fix by @PMheart  Fixed 10.14.4 Beta 1 By N.Mano</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				weMISGPTidBIweoguZkBAAAPMEj/BZJudgBIg8QIW13D
+				Dx8A
+				</data>
+				<key>MatchOS</key>
+				<string>10.14.4</string>
+				<key>Replace</key>
+				<data>
+				uwD/AABIY9OJ0EjB6iC5mQEAAA8wSP8Fk652AEiDxAhb
+				XcOQ
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>@Pike R. Alpha xcpm MSR Patch 4</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				QgYAANwzAAAAAAAAAAAAAB8AAAAAAAAAGAAAAAAAAAAA
+				AAAAAAAAAAAAAAAAAAAA
 				</data>
 				<key>Replace</key>
 				<data>
-				bzzQd1APtsA=
+				QgYAAAAAAAAAAAAAAAAAAB8AAAAAAAAAGAAAAAAAAAAA
+				AAAAAAAAAAAAAAAAAAAA
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>SammlerG Sierra xcpm MSR Patch 3 / xcpm support Pike R. Alpha/0x82D390/MSR_PP0_POLICY 0x63a</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				OgYAANwzAAAAAAAAAAAAAB8=
+				</data>
+				<key>Replace</key>
+				<data>
+				OgYAAAAAAAAAAAAAAAAAAAA=
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Disable panic kext logging on 10.14 Release kernel</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				igKEwHRC
+				</data>
+				<key>Replace</key>
+				<data>
+				igKEwOtC
 				</data>
 			</dict>
 		</array>
 		<key>KernelXCPM</key>
-		<true/>
+		<false/>
 		<key>KextsToPatch</key>
 		<array>
 			<dict>
@@ -1289,11 +1351,11 @@
 		<key>#Version</key>
 		<string>1.0</string>
 		<key>BiosReleaseDate</key>
-		<string>07/30/18</string>
+		<string>09/19/18</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>BiosVersion</key>
-		<string>MP51.88Z.F000.B00.1807300628</string>
+		<string>MP51.88Z.F000.B00.1809191555</string>
 		<key>Board-ID</key>
 		<string>Mac-F221BEC8</string>
 		<key>BoardManufacturer</key>
@@ -1310,6 +1372,8 @@
 		<string>Apple Inc.</string>
 		<key>ChassisType</key>
 		<string>0x07</string>
+		<key>EfiVersion</key>
+		<string>140.0.0.0.0</string>
 		<key>Family</key>
 		<string>MacPro</string>
 		<key>FirmwareFeatures</key>
